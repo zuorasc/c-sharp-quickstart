@@ -2,8 +2,8 @@
 * This is a simple UI that uses the Zuora Service to do various calls to Zuora
 
 ## Install
-* git clone
-* open solution in Visual Studio 2012
+* Git clone
+* Open solution in Visual Studio 2012
 * Run TestingUI project
 
 ## Tests

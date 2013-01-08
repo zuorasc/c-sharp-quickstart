@@ -3,7 +3,12 @@
 
 ## Install
 * git clone
+* open solution in Visual Studio
+* Run TestingUI project
+
+## Tests
+* xUnit unit tests are included, however these don't run natively in the VS Express
 
 ## Generating WSDL
 * Run GenProxy.bat from the folder
-* Search/Replace in ApiProxy.cs: 'api.zuora.com.ErrorCode' to 'ErrorCod
+* Search/Replace in ApiProxy.cs: 'api.zuora.com.ErrorCode' to 'ErrorCode'

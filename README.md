@@ -3,7 +3,7 @@
 
 ## Install
 * git clone
-* open solution in Visual Studio
+* open solution in Visual Studio 2012
 * Run TestingUI project
 
 ## Tests

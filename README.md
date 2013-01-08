@@ -1,5 +1,5 @@
 # SimpleTestUI
-* This is a simple UI that uses the Zuora Service to do various calls to Zuora
+* This is a simple UI that uses the Zuora Service C# wrapper to do various calls to Zuora
 
 ## Install
 * Git clone

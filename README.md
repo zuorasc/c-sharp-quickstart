@@ -2,7 +2,7 @@
 * This is a simple UI that uses the Zuora Service C# wrapper to do various calls to Zuora
 
 ## Install
-* Git clone
+* Git clone https://github.com/zuorasc/SimpleTestUI.git
 * Open solution in Visual Studio 2012 for Web
 * Run TestingUI project
 

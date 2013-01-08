@@ -1,0 +1,10 @@
+C:\Users\mdemin\Documents\Visual Studio 2012\Projects\basespace-store\src\Zuora.Services\bin\Debug\Illumina.Zuora.Services.dll.config
+C:\Users\mdemin\Documents\Visual Studio 2012\Projects\basespace-store\src\Zuora.Services\bin\Debug\Illumina.Zuora.Services.dll
+C:\Users\mdemin\Documents\Visual Studio 2012\Projects\basespace-store\src\Zuora.Services\bin\Debug\Illumina.Zuora.Services.pdb
+C:\Users\mdemin\Documents\Visual Studio 2012\Projects\basespace-store\src\Zuora.Services\obj\Debug\Illumina.Zuora.Services.dll
+C:\Users\mdemin\Documents\Visual Studio 2012\Projects\basespace-store\src\Zuora.Services\obj\Debug\Illumina.Zuora.Services.pdb
+C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services\bin\Debug\Illumina.Zuora.Services.dll.config
+C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services\bin\Debug\Illumina.Zuora.Services.dll
+C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services\bin\Debug\Illumina.Zuora.Services.pdb
+C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services\obj\Debug\Illumina.Zuora.Services.dll
+C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services\obj\Debug\Illumina.Zuora.Services.pdb

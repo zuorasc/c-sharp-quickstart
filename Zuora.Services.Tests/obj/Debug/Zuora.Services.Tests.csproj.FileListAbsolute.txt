@@ -18,3 +18,12 @@ C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services.Tests
 C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services.Tests\obj\Debug\Zuora.Services.Tests.csprojResolveAssemblyReference.cache
 C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services.Tests\obj\Debug\Zuora.Services.Tests.dll
 C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services.Tests\obj\Debug\Zuora.Services.Tests.pdb
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.Tests\bin\Debug\Zuora.Services.Tests.dll
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.Tests\bin\Debug\Zuora.Services.Tests.pdb
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.Tests\bin\Debug\Illumina.Zuora.Services.dll
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.Tests\bin\Debug\Illumina.Zuora.Services.pdb
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.Tests\bin\Debug\xunit.xml
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.Tests\bin\Debug\xunit.extensions.xml
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.Tests\obj\Debug\Zuora.Services.Tests.csprojResolveAssemblyReference.cache
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.Tests\obj\Debug\Zuora.Services.Tests.dll
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.Tests\obj\Debug\Zuora.Services.Tests.pdb

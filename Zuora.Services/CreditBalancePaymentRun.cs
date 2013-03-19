@@ -16,8 +16,8 @@ namespace Zuora.Services
         int maxAttempts = 3;
         List<Account> accountList = new List<Account>();
         List<Invoice> invoiceList = new List<Invoice>();
-        private string csvPath = "C:\\dev\\Illumina.iCloud\\CloudWeb\\branches\\v1.2-zuora\\src\\Zuora.Services\\exportCsv.csv";
-        private string paymentRunLogPath = "C:\\dev\\Illumina.iCloud\\CloudWeb\\branches\\v1.2-zuora\\src\\Zuora.Services\\paymentrunlog.txt";
+        private string csvPath = "";
+        private string paymentRunLogPath = "";
         TextWriter tw;
 
         public CreditBalancePaymentRun(ZuoraService zs)

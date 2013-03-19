@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using System.Security;
 
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Illumina")]
+[assembly: AssemblyCompany("Z")]
 [assembly: AssemblyCopyright("Copyright © 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

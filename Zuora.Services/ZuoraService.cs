@@ -13,7 +13,7 @@ namespace Zuora.Services
     public class ZuoraService : Zuora.Services.IZuoraService
     {
 
-        private string csvPath = "C:\\dev\\Illumina.iCloud\\CloudWeb\\branches\\v1.2-zuora\\src\\Zuora.Services\\exportCsv.csv";
+        private string csvPath = "";
         private String endpoint;
         private String username;
         private String password;
@@ -58,7 +58,7 @@ namespace Zuora.Services
                         totalWaitTime += sleepTime;
                         if (totalWaitTime >= maxSleepTime)
                         {
-                            //should notify illumina that export timeout happened here
+                            //should notify that export timeout happened here
                             Console.WriteLine("Export timeout");
                             return null;
                         }

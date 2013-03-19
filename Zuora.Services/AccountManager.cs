@@ -160,7 +160,7 @@ namespace Zuora.Services
         /// <returns></returns>
         public ResponseHolder GetInvoicesForAccount(String accountId)
         {
-            String invoiceQueryString = "SELECT Id, InvoiceNumber, Amount, DueDate, Balance, InvoiceDate FROM Invoice WHERE AccountId = '" + accountId + "'";
+            String invoiceQueryString = "SELECT Id, InvoiceNumber, Amount, DueDate, Balance, InvoiceDate, Status FROM Invoice WHERE AccountId = '" + accountId + "'";
             return zs.Query(invoiceQueryString);
         }
         /// <summary>

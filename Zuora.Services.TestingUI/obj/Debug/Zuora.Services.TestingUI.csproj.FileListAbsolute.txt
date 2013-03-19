@@ -19,3 +19,10 @@ C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services.Testi
 C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services.TestingUI\bin\Zuora.Services.TestingUI.pdb
 C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services.TestingUI\bin\Illumina.Zuora.Services.dll
 C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services.TestingUI\bin\Illumina.Zuora.Services.pdb
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.TestingUI\bin\Zuora.Services.TestingUI.dll
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.TestingUI\bin\Zuora.Services.TestingUI.pdb
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.TestingUI\bin\Illumina.Zuora.Services.dll
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.TestingUI\bin\Illumina.Zuora.Services.pdb
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.TestingUI\obj\Debug\Zuora.Services.TestingUI.csprojResolveAssemblyReference.cache
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.TestingUI\obj\Debug\Zuora.Services.TestingUI.dll
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services.TestingUI\obj\Debug\Zuora.Services.TestingUI.pdb

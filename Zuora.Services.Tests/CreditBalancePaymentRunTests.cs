@@ -9,9 +9,7 @@ namespace Zuora.Services.Tests
  
     public class CreditBalancePaymentRunTests : IDisposable
     {
-        private String endpoint = "https://apisandbox.zuora.com/apps/services/a/42.0";
-        private String username = "maksim.demin@illumina.com";
-        private String password = "!Foid3168";
+
 
         ZuoraService zs;
         ZuoraTestHelper zth;
@@ -19,7 +17,7 @@ namespace Zuora.Services.Tests
         PaymentManager pm;
         public CreditBalancePaymentRunTests()
         {
-            zs = new ZuoraService(username, password, endpoint);
+            zs = new ZuoraService(Settings.API_USERNAME, Settings.API_PASSWORD, Settings.API_ENDPOINT);
             zth = new ZuoraTestHelper();
             cbpr = new CreditBalancePaymentRun(zs);
             pm = new PaymentManager(zs);

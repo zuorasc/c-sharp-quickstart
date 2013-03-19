@@ -8,3 +8,8 @@ C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services\bin\D
 C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services\bin\Debug\Illumina.Zuora.Services.pdb
 C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services\obj\Debug\Illumina.Zuora.Services.dll
 C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services\obj\Debug\Illumina.Zuora.Services.pdb
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services\bin\Debug\Illumina.Zuora.Services.dll.config
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services\bin\Debug\Illumina.Zuora.Services.dll
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services\bin\Debug\Illumina.Zuora.Services.pdb
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services\obj\Debug\Illumina.Zuora.Services.dll
+\\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services\obj\Debug\Illumina.Zuora.Services.pdb

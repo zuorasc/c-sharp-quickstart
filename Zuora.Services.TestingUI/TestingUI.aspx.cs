@@ -182,7 +182,9 @@ namespace Zuora.Services.TestingUI
                 else if (operation == "Get Invoices For Account")
                 {
                     result.Text += "<br/>";
-                    var res = am.GetInvoicesForAccount(AccountId.Text);
+                    //var res = am.GetInvoicesForAccount(AccountId.Text);
+                     string FIELDS_INVOICE = "Id, AccountId, AdjustmentAmount, Amount, AmountWithoutTax, Balance, Comments, CreatedDate, DueDate, IncludesOneTime, IncludesRecurring, IncludesUsage, InvoiceDate, InvoiceNumber, LastEmailSentDate, PaymentAmount, PostedDate, RefundAmount, Source, SourceId, Status, TargetDate, TaxAmount, TaxExemptAmount, TransferredToAccounting, UpdatedDate";
+                    var res = zs.Query("");
                     if (res.Success)
                     {
                         result.Text += "<br/>";
@@ -191,7 +193,7 @@ namespace Zuora.Services.TestingUI
                             foreach (zObject zo in res.Objects)
                             {
                                 Invoice inv = (Invoice)zo;
-                                result.Text += "Invoice Number: " + inv.InvoiceNumber + " Invoice Amount: " + inv.Amount + "<br/>";
+                                result.Text += "Invoice Number: " + inv.InvoiceNumber + " Invoice Amount: " + inv.Amount + " Status: " + inv.Status + "<br/>";
                             }
                         }
                         else
@@ -371,11 +373,18 @@ namespace Zuora.Services.TestingUI
                 else if (operation == "Get Single Invoice")
                 {
                     result.Text += "<br/>";
-                    var res = am.GetSingleInvoice(InvoiceId.Text);
+                    //var res = am.GetSingleInvoice(InvoiceId.Text);
+                    //var res = zs.Query("SELECT id, status FROM Invoice WHERE Id = '" + InvoiceId.Text + "'").FirstOrDefault<Invoice>();
+                    Boolean withBody = false;
+                    //string FIELDS_INVOICE = "Id, AccountId, AdjustmentAmount, Amount, AmountWithoutTax, Balance, Comments, CreatedDate, DueDate, IncludesOneTime, IncludesRecurring, IncludesUsage, InvoiceDate, InvoiceNumber, LastEmailSentDate, PaymentAmount, PostedDate, RefundAmount, Source, SourceId, Status, TargetDate, TaxAmount, TaxExemptAmount, TransferredToAccounting, UpdatedDate";
+                    string FIELDS_INVOICE = "Id, AccountId, AdjustmentAmount, Amount, AmountWithoutTax, Balance, Comments, CreatedDate, DueDate, IncludesOneTime, IncludesRecurring, IncludesUsage, InvoiceDate, InvoiceNumber, LastEmailSentDate, PaymentAmount, PostedDate, RefundAmount, Status";
+                    var query = string.Format("SELECT {0} FROM invoice WHERE Id = '{1}'", FIELDS_INVOICE, InvoiceId.Text);
+                    var res = zs.Query(query);
                     if (res.Success && res.Objects != null)
                     {
                         result.Text += "Success: " + res.Id;
                         result.Text += "Invoice Amount: " + ((Invoice)res.Objects[0]).Amount;
+                        result.Text += " Status: " + ((Invoice)res.Objects[0]).Status; 
                     }
                     else
                     {

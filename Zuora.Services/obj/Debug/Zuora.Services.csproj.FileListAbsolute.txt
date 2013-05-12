@@ -14,3 +14,9 @@ C:\Users\mdemin\Documents\Visual Studio 2012\Projects\Zuora\Zuora.Services\obj\D
 \\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services\obj\Debug\Illumina.Zuora.Services.dll
 \\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services\obj\Debug\Illumina.Zuora.Services.pdb
 \\psf\Home\Documents\Visual Studio 2012\Projects\SimpleTestUI\Zuora.Services\obj\Debug\Zuora.Services.csprojResolveAssemblyReference.cache
+C:\Users\sxuereb\Desktop\SimpleTestUI-master\Zuora.Services\bin\Debug\Illumina.Zuora.Services.dll.config
+C:\Users\sxuereb\Desktop\SimpleTestUI-master\Zuora.Services\bin\Debug\Illumina.Zuora.Services.dll
+C:\Users\sxuereb\Desktop\SimpleTestUI-master\Zuora.Services\bin\Debug\Illumina.Zuora.Services.pdb
+C:\Users\sxuereb\Desktop\SimpleTestUI-master\Zuora.Services\obj\Debug\Zuora.Services.csprojResolveAssemblyReference.cache
+C:\Users\sxuereb\Desktop\SimpleTestUI-master\Zuora.Services\obj\Debug\Illumina.Zuora.Services.dll
+C:\Users\sxuereb\Desktop\SimpleTestUI-master\Zuora.Services\obj\Debug\Illumina.Zuora.Services.pdb

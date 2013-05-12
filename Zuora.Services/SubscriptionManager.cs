@@ -14,6 +14,20 @@ namespace Zuora.Services
             this.zs = zs;
         }
 
+        /*public ResponseHolder GetCurrentSubscription(String subscriptionId)
+        {
+            String subscriptionQuery = "SELECT Id,Name,Status,Version,PreviousSubscriptionId,ContractEffectiveDate,TermStartDate FROM Subscription WHERE AccountId='" + subscriptionId + "' AND Status='Active'AND Status='Active'";
+            Subscription activeSubscription = (Subscription)zs.Query(subscriptionQuery).Objects[0];
+
+            String RatePlanString = "SELECT Id,Name,ProductRatePlanId FROM RatePlan WHERE SubscriptionId='" + activeSubscription.Id + "'";
+            ResponseHolder ratePlans = zs.Query(RatePlanString);
+
+            foreach (zObject ratePlan in ratePlans.Objects)
+            {
+
+            }
+        }*/
+
         public SubscribeResponseHolder Subscribe(Account acc, Contact con, PaymentMethod pay, List<ProductRatePlanHolder> productRatePlans, Subscription sub, PreviewOptions po, SubscribeOptions so)
         {
             SubscribeRequest subscribeRequest = new SubscribeRequest();

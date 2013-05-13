@@ -850,6 +850,60 @@ namespace Zuora.Services.TestingUI {
         protected global::System.Web.UI.WebControls.TextBox AmendmentStartDate;
         
         /// <summary>
+        /// PageIdRow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow PageIdRow;
+        
+        /// <summary>
+        /// PageId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PageId;
+        
+        /// <summary>
+        /// TenantIdRow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TenantIdRow;
+        
+        /// <summary>
+        /// TenantId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TenantId;
+        
+        /// <summary>
+        /// APISecurityKeyRow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow APISecurityKeyRow;
+        
+        /// <summary>
+        /// APISecurityKey control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox APISecurityKey;
+        
+        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>

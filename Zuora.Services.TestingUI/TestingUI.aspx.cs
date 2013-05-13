@@ -54,6 +54,12 @@ namespace Zuora.Services.TestingUI
                 ListItem l35 = new ListItem("Do Renewal Amendment", "Do Renewal Amendment", true);
                 ListItem l36 = new ListItem("Do Terms And Conditions Amendment", "Do Terms And Conditions Amendment", true);
                 ListItem l37 = new ListItem("Get Subscription And Charge Info", "Get Subscription And Charge Info", true);
+                ListItem l38 = new ListItem("Update Contact", "Update Contact", true);
+                ListItem l39 = new ListItem("Get Credit Cards", "Get Credit Cards", true);
+                ListItem l40 = new ListItem("New Credit Card", "New Credit Card", true);
+                ListItem l41 = new ListItem("Get Invoices PDF For Account", "Get Invoices PDF For Account", true);
+                //ListItem l42 = new ListItem("Get Current Subscription", "Get Current Subscription", true);
+                ListItem l43 = new ListItem("Delete Payment Method", "Delete Payment Method");
                 
                 ddl1.Items.Add(l3);
                 ddl1.Items.Add(l2);
@@ -92,6 +98,12 @@ namespace Zuora.Services.TestingUI
                 ddl1.Items.Add(l35);
                 ddl1.Items.Add(l36);
                 ddl1.Items.Add(l37);
+                ddl1.Items.Add(l38);
+                ddl1.Items.Add(l39);
+                ddl1.Items.Add(l40);
+                ddl1.Items.Add(l41);
+                //ddl1.Items.Add(l42);
+                ddl1.Items.Add(l43);
             }
         }
 
@@ -182,9 +194,9 @@ namespace Zuora.Services.TestingUI
                 else if (operation == "Get Invoices For Account")
                 {
                     result.Text += "<br/>";
-                    //var res = am.GetInvoicesForAccount(AccountId.Text);
-                     string FIELDS_INVOICE = "Id, AccountId, AdjustmentAmount, Amount, AmountWithoutTax, Balance, Comments, CreatedDate, DueDate, IncludesOneTime, IncludesRecurring, IncludesUsage, InvoiceDate, InvoiceNumber, LastEmailSentDate, PaymentAmount, PostedDate, RefundAmount, Source, SourceId, Status, TargetDate, TaxAmount, TaxExemptAmount, TransferredToAccounting, UpdatedDate";
-                    var res = zs.Query("");
+                    var res = am.GetInvoicesForAccount(AccountId.Text);
+                    //string FIELDS_INVOICE = "Id, AccountId, AdjustmentAmount, Amount, AmountWithoutTax, Balance, Comments, CreatedDate, DueDate, IncludesOneTime, IncludesRecurring, IncludesUsage, InvoiceDate, InvoiceNumber, LastEmailSentDate, PaymentAmount, PostedDate, RefundAmount, Source, SourceId, Status, TargetDate, TaxAmount, TaxExemptAmount, TransferredToAccounting, UpdatedDate";
+                    //var res = zs.Query("");
                     if (res.Success)
                     {
                         result.Text += "<br/>";
@@ -794,6 +806,126 @@ namespace Zuora.Services.TestingUI
                         result.Text += sih.Message;
                     }
                 }
+                else if (operation == "Update Contact")
+                {
+                    ResponseHolder resp = am.UpdateContact(AccountId.Text, LastName.Text, FirstName.Text, Address1.Text, City.Text, State.Text, Zip.Text, Country.Text);
+
+                    if (resp.Success)
+                    {
+                        result.Text += resp.Id;
+                    }
+                    else
+                    {
+                        result.Text += resp.Message;
+                    }
+                }
+                else if(operation == "Get Credit Cards")
+                {
+                    ResponseHolder resp = am.GetCreditCardsPaymentMethods(AccountId.Text);
+
+                    if (resp.Success)
+                    {
+                        foreach (zObject zo in resp.Objects)
+                        {
+                            PaymentMethod paymentMethod = (PaymentMethod)zo;
+                            result.Text += "Payment Method: " + paymentMethod.Id + "<br/>";
+                        }
+                    }
+                    else
+                    {
+                        result.Text += resp.Message;
+                    }
+                }
+                else if (operation == "Get Invoices PDF For Account")
+                {
+                    result.Text += "<br/>";
+                    var res = am.GetInvoicesForAccount(AccountId.Text);
+                    //string FIELDS_INVOICE = "Id, AccountId, AdjustmentAmount, Amount, AmountWithoutTax, Balance, Comments, CreatedDate, DueDate, IncludesOneTime, IncludesRecurring, IncludesUsage, InvoiceDate, InvoiceNumber, LastEmailSentDate, PaymentAmount, PostedDate, RefundAmount, Source, SourceId, Status, TargetDate, TaxAmount, TaxExemptAmount, TransferredToAccounting, UpdatedDate";
+                    //var res = zs.Query("");
+                    if (res.Success)
+                    {
+                        result.Text += "<br/>";
+                        if (res.Objects != null)
+                        {
+                            Invoice invoice = (Invoice) res.Objects[0];
+                            foreach (zObject zo in res.Objects)
+                            {
+                                Invoice inv = (Invoice)zo;
+                                if (inv.CreatedDate > invoice.CreatedDate)
+                                {
+                                    invoice = inv;
+                                }
+                                result.Text += "Invoice Number: " + inv.InvoiceNumber + " Invoice Amount: " + inv.Amount + " Status: " + inv.Status + "<br/>";
+                            }
+
+                            Invoice invRes = (Invoice)am.GetInvoicePDFForAccount(invoice.Id).Objects[0];
+                            var invoiceBody = invRes.Body;
+
+                            Byte[] bytes = System.Convert.FromBase64String(invoiceBody.ToString());
+
+                            string pathString = @"C:\Users\sxuereb\Documents\Invoices";
+                            string fileName = invRes.InvoiceNumber +".pdf";
+                            pathString = System.IO.Path.Combine(pathString, fileName);
+
+                            if (!System.IO.File.Exists(pathString))
+                            {
+                                using (System.IO.FileStream fs = System.IO.File.Create(pathString))
+                                {
+                                    for (int i = 0; i < bytes.Length; i++)
+                                    {
+                                        fs.WriteByte(bytes[i]);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("File \"{0}\" already exists.", fileName);
+                                return;
+                            }
+                            
+                        }
+                        else
+                        {
+                            result.Text += res.Message;
+                        }
+                    }
+                    else
+                    {
+                        result.Text += res.Message;
+                    }
+                }
+                /*else if(operation == "Get Current Subscription")
+                {
+                    ResponseHolder resp = sm.GetCurrentSubscription(AccountId.Text);
+
+                    
+                    if (resp.Success)
+                    {
+                        
+                    }
+                    else
+                    {
+                        result.Text += resp.Message;
+                    }
+                }
+                else if(operation == "New Credit Card")
+                {
+
+                }*/
+                else if (operation == "Delete Payment Method")
+                {
+                    List<ResponseHolder> resp = am.DeletePaymentMethod(PaymentMethodId.Text);
+
+                    if (resp[0].Success)
+                    {
+                        result.Text += "Successfully Deleted Payment Method.";
+                    }
+                    else
+                    {
+                        result.Text += resp[0].Message;
+                    }
+                }
+                
             }
             else
             {

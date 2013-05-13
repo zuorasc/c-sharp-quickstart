@@ -156,6 +156,37 @@
         else if (output == "Get Subscription And Charge Info") {
             $("#SubscriptionIdRow").show();
         }
+        else if (output == "Update Contact") {
+            $("#AccountIdRow").show();
+            $("#FirstNameRow").show();
+            $("#LastNameRow").show();
+            $("#Address1Row").show();
+            $("#CityRow").show();
+            $("#StateRow").show();
+            $("#ZipRow").show();
+            $("#CountryRow").show();
+        }
+        else if (output == "Get Credit Cards"){
+            $("#AccountIdRow").show();
+        }
+        else if (output == "Get Invoices PDF For Account") {
+            $("#AccountIdRow").show();
+        }
+        /*else if (output == "Get Current Subscription") {
+            $("#AccountIdRow").show();
+        }
+        else if (output == "New Credit Card") {
+            showiFrameFields();
+        }*/
+        else if( output == "Delete Payment Method"){
+            $("#PaymentMethodIdRow").show();
+        }
+    }
+    function showiFrameFields() {
+        $("#PageIdRow").show();
+        $("#TenantIdRow").show();
+        $("#APISecurityKeyRow").show();
+        $("#z_hppm_iframe").show();
     }
     function showSubscriptionFields() {
         $("#ProductRatePlanNameRow").show();
@@ -222,6 +253,11 @@
         $("#AmendmentDateRow").hide();
         $("#ProductRatePlanIdRow").hide();
 
+        $("#PageIdRow").hide();
+        $("#TenantIdRow").hide();
+        $("#APISecurityKeyRow").hide();
+        $("#z_hppm_iframe").hide();
+
     }
     function showContactFields() {
         $("#FirstNameRow").show();
@@ -254,7 +290,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Enter password:</asp:TableCell>
-                <asp:TableCell><asp:TextBox ID="pass" runat="server"></asp:TextBox></asp:TableCell>
+                <asp:TableCell><asp:TextBox ID="pass" TextMode="Password" runat="server"></asp:TextBox></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Endpoint:</asp:TableCell>
@@ -467,10 +503,25 @@
                 <asp:TableCell>Amendment Start Date: </asp:TableCell>
                 <asp:TableCell><asp:TextBox ID="AmendmentStartDate" runat="server">1/8/2013</asp:TextBox></asp:TableCell>
             </asp:TableRow>
+            <asp:TableRow ID="PageIdRow">
+                <asp:TableCell>PageId: </asp:TableCell>
+                <asp:TableCell><asp:TextBox ID="PageId" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TenantIdRow">
+                <asp:TableCell>TenantId: </asp:TableCell>
+                <asp:TableCell><asp:TextBox ID="TenantId" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow ID="APISecurityKeyRow">
+                <asp:TableCell>APISecurityKey: </asp:TableCell>
+                <asp:TableCell><asp:TextBox ID="APISecurityKey" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
         </asp:Table>
         <asp:Button ID="Button1" runat="server" onclick="Login" Text="Login!" />
         <asp:Button ID="Button2" runat="server" onclick="DoAction" Text="Do Action!" />
+        <br />
+        <iframe id="z_hppm_iframe" name="z_hppm_iframe" src="https://apisandbox.zuora.com/apps/PublicHostedPage.do?method=requestPage&id=2c92c0f93e8c1ce1013e8fbe9137471f&tenantId=10977&timestamp=1368211231328&token=BitceXFwRxF9yCKWjTPCozdmF3xPAVlh&signature=MDU3MzM4N2E1NDdmM2YyNDZkYTdiMzQ2MmI5OWNjNzg="></iframe> 
         <br/>
+
         <asp:Label ID="result" runat="server"></asp:Label>
     </form>
 </body>

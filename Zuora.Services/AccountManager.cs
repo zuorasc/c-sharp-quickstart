@@ -164,6 +164,16 @@ namespace Zuora.Services
             return zs.Query(invoiceQueryString);
         }
         /// <summary>
+        /// Get the pdf version for an invoice
+        /// </summary>
+        /// <param name="invoiceId"></param>
+        /// <returns></returns>
+        public ResponseHolder GetInvoicePDFForAccount(String invoiceId)
+        {
+            String invoiceBodyQueryString = "SELECT Id, AccountId, Amount, Balance, DueDate, InvoiceDate, InvoiceNumber, Status, TargetDate, Body FROM Invoice WHERE Id= '" + invoiceId + "'";
+            return zs.Query(invoiceBodyQueryString);
+        }
+        /// <summary>
         /// Get Refunds based on accountId
         /// </summary>
         /// <param name="accountId"></param>
@@ -234,6 +244,42 @@ namespace Zuora.Services
             return zs.Query(contactQueryString);
         }
         /// <summary>
+        /// Upade Contact on account
+        /// </summary>
+        /// <param name="accountId"></param>
+        /// <param name="lastName"></param>
+        /// <param name="firstName"></param>
+        /// <param name="address"></param>
+        /// <param name="state"></param>
+        /// <param name="city"></param>
+        /// <param name="country"></param>
+        /// <param name="postalCode"></param>
+        /// <returns></returns>
+        public ResponseHolder UpdateContact(String accountId, String lastName, String firstName, String address, String city, String state, String postalCode, String country)
+        {
+            ResponseHolder qRes = GetContact(accountId);
+            
+            if(qRes.Success)
+            {
+                Contact contact = new Contact();
+                   
+                if((Contact) qRes.Objects[0] != null)
+                {
+                    contact.Id = (String) qRes.Objects[0].Id;
+                    contact.LastName = lastName;
+                    contact.FirstName = firstName;
+                    contact.Address1 = address;
+                    contact.City = city;
+                    contact.State = state;
+                    contact.PostalCode = postalCode;
+                    contact.Country = country;
+
+                    return zs.Update(new List<zObject> { contact })[0];
+                }
+            }
+            return null;
+         }
+        /// <summary>
         /// Change the invoice template id for an account
         /// </summary>
         /// <param name="accountId"></param>
@@ -245,6 +291,26 @@ namespace Zuora.Services
             acc.Id = accountId;
             acc.InvoiceTemplateId = templateId;
             return zs.Update(new List<zObject> { acc })[0];
+        }
+        /// <summary>
+        /// Get Credit Cards based on accountId
+        /// </summary>
+        /// <param name="accountId"></param>
+        /// <returns></returns>
+        public ResponseHolder GetCreditCardsPaymentMethods(String accountId)
+        {
+            String creditCardsQueryString = "Select Id,CreditCardHolderName,CreditCardMaskNumber,CreditCardExpirationYear,CreditCardExpirationMonth,CreditCardType from PaymentMethod WHERE AccountId='" + accountId + "'";
+            return zs.Query(creditCardsQueryString);
+        }
+
+        /// <summary>
+        /// Delete Payment Method
+        /// </summary>
+        /// <param name="paymentMethodId"></param>
+        /// <returns></returns>
+        public List<ResponseHolder> DeletePaymentMethod(String paymentMethodId)
+        {
+            return zs.Delete(new List<String>{paymentMethodId}, "PaymentMethod");           
         }
     }
 }

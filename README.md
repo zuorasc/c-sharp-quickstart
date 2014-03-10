@@ -10,6 +10,9 @@
 * xUnit unit tests are included, however these don't run natively in the VS Express
 
 ## Generating WSDL
+* Add the custom fields to the wsdl in the zuora services project folder
+* Open up GenProxy.bat in Visual Studio and make sure the wsdl name is correct
+* Open up the folder in explorer/finder
 * Run GenProxy.bat from the folder
 * Search/Replace in ApiProxy.cs: 'api.zuora.com.ErrorCode' to 'ErrorCode'
 

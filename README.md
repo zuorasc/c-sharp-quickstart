@@ -1,8 +1,8 @@
-# SimpleTestUI
-* This is a simple UI that uses the Zuora Service C# wrapper to do various calls to Zuora
+# C Sharp Quick start
+* This is a simple UI that uses the Zuora Service C# wrapper to do various calls to Zuora. 
 
 ## Install
-* Git clone https://github.com/zuorasc/SimpleTestUI.git
+* Git clone https://github.com/zuorasc/c-sharp-quickstart.git
 * Open solution in Visual Studio 2012 for Web
 * Run TestingUI project
 
